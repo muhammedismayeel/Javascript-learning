@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8</title>
+</head>
+<body>
+    <button onclick="hello()">click me</button>
+    <p id="open">hello!</p>
+
+    <input id="input" type="text" placeholder="Enter your name">
+    <p class="output"></p>
+
+    <button onclick="addNum()">+</button>
+    <button onclick="lessnum()">-</button>
+    <p id="num">0</p>
+
+    <script>
+        //program 1
+        function hello(){
+            document.getElementById("open").innerText = "you clicked me "; 
+        }
+        //program 2
+        let input = document.getElementById("input");
+        let output = document.getElementById("output");
+        input.addEventListener("input",function(){
+            output.textContent = "hello,"+input.value;
+        });
+        //program 3
+        
+        let count = 0;
+        function addNum(){
+            count++;
+            document.getElementById("num").innerText = count;
+        }
+        function lessnum(){
+            count--;
+            document.getElementById("num").innerText = count;
+        }
+    </script>
+</body>
+</html>
