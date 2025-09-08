@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6</title>
+</head>
+<body>
+    <script>
+        //create a student Object
+        let student = {
+            name : "ismayeel",
+            age :19,
+            regein : "india"
+        };
+        console.log(student);
+
+        //update a property
+        student.regein= "asia";
+        console.log(student.regein);
+
+        //add and delete propertice
+        student.country="india";
+        console.log(student.country);
+        delete student.regein;
+        console.log(student);
+
+        //object with Method
+        let home = {
+            name : "mother",
+            greet :function(){
+                console.log("hello "+this.name);
+            }
+        }
+        home.greet();
+        //nested object
+        let employee={
+            id : 290,
+            detail:{
+                name : "ismayeel",
+                gmail:"ismayeel@gamil.com"
+            }
+        }
+        console.log(employee.detail.name);
+    </script>
+</body>
+</html>
