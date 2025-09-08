@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini project - student management</title>
+</head>
+<body>
+    <h1>Student Management System</h1>
+    <p>open the console (F12) to interact with the System</p>
+    <script>
+        //store student in an array objects
+        let student =[
+            {name:"ali",mark:40},
+            {name:"sara",mark:18},
+            {name:"ahmed",mark:40},
+        ];
+
+        //function to add a student
+        function addStudent(name,mark){
+            student.push({
+                name:"ajyht",mark:89
+            });
+            console.log("student added:",name);
+        }
+
+        //function to display all student
+        function displayStudent(){
+            console.log("----student list---");
+            for(let i=0;i<student.length;i++){
+                console.log(student[i].name+"-marks:"+student[i].mark);
+            }
+        }
+
+        //function to calculate average marks
+        function calculateAverage(){
+            let total =0;
+            for(let i=0;i<student.length;i++){
+                total += student[i].mark;
+            }
+            let avg = total / student.length;
+            console.log("class Average :",avg);
+        }
+
+        //function to find topper
+        function fintTopper(){
+            let topper=student[0];
+            for (let i =0;i<student.length;i++){
+                if(student[i].mark>topper.mark){
+                    topper = student[i];
+                }
+            }
+            console.log("topper :",topper.name,"with",topper.mark,"marks");
+        }
+
+        displayStudent();
+        addStudent("ismayeel",20);
+        displayStudent();
+        calculateAverage();
+        fintTopper();
+    </script>
+</body>
+</html>
