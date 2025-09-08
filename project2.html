@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2</title>
+</head>
+<body>
+    <h1>Console To-Do list</h1>
+    <p>Open the console (F12) to text the Project</p>
+    <script>
+        let task = [];
+        function addTask(title){
+            task.push({title:title,done:false});
+            console.log("Task added: ",title);
+        }
+
+        function completeTask(index){
+            if(task[index]){
+                task[index].done = true;
+                console.log("task completed: ",task[index].title);
+            }else{
+                console.log("task not found");
+            }
+        }
+
+        function showTask(){
+            console.log("----To-Do list");
+            for(let i=1;i<task.length;i++){
+                let status = task[i].done?"done":"not done";
+                console.log((i+1)+"."+task[i].title+"-"+status);
+            }
+        }
+
+        addTask("learn function");
+        addTask("upload project to gitgub");
+        showTask();
+        completeTask(0);
+        showTask();
+    </script>
+</body>
+</html>
