@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9</title>
+</head>
+<body>
+    <script>
+        // for loop
+        for(let i=1;i<=10;i++){
+            console.log(i);
+        }
+
+        // while loop
+        let e=1;
+        let sum = 1;
+        while(e <= 50){
+            sum +=1;
+            e++;
+        }
+        console.log(sum);
+
+        //multiplecation table
+        let num= prompt("Enter the number");
+        for(let i=1 ; i<=10 ; i++){
+            console.log(num +"x"+i+"="+(num*i));
+        }
+
+        //reverse countdown
+        for (let f=10 ; f>=0 ; f--){
+            console.log(f);
+        }
+
+        //Array looping
+        let number = ["one","two","three","four","five"];
+        for(i=0;i<number;i++){
+            console.log(number);
+        }
+
+        //object loop
+        let student = {
+            name:"ismayeel",
+            age : 19
+        }
+        for(let key in student){
+            console.log(key +":"+student[key]);
+        }
+    </script>
+</body>
+</html>
