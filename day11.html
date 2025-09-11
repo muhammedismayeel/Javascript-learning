@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11</title>
+</head>
+<body>
+    <!--key detector-->
+    <input type="text" id="myinput">
+    <br><br>
+    <hr>
+
+    <!--double-click color-->
+    <button id="box">click me</button>
+    <br><br>
+    <hr>
+
+    <!--hover box-->
+    <h3>color blue</h3>
+    <div style="width: 150px;height: 150px;background: lightgray;display: block;margin: 20px 0;" id="one"></div>
+    <hr>
+
+    <!--from submit-->
+    <form class="q4-in">
+    <input type="text" placeholder="Enter somthing----" id="q4-form">
+    <button type="submit">submit</button>
+    <p id="Q4"></p>
+    </form>
+
+    <!--event info-->
+    <h2>Event info</h2>
+    <button id="q5-btn">click me</button>
+    <script>
+        //program 1
+        document.getElementById("myinput").addEventListener("keydown",function(event){
+           console.log("you pressed:" , event.key);
+        });
+
+        //program 2
+        let box = document.getElementById("box");
+        box.addEventListener("dblclick",function(event){
+            box.style.background = "green";
+        });
+
+        //program 3
+        const one = document.getElementById("one");
+        one.addEventListener('mouseenter',function (){
+            one.style.background = "blue";
+        });
+        one.addEventListener('mouseleave',function (){
+            one.style.background = "green";
+        });
+        //program 4
+        let from = document.getElementById("q4-in");
+        let output = document.getElementById("Q4");
+        let nameinput = document.getElementById("q4-from");
+        from.addEventListener("submit",function(event){
+            event.preventDefault();
+            const name = nameinput.value.trim();
+            if(name==""){
+                output.textContent = "please enter a name";
+            }
+            else{
+                out.textContent = "hello "+name;
+            }
+        });
+        //program 5
+        let btn = document.getElementById("q5-btn");
+        btn.addEventListener("click",function(event){
+            console.log("event type :", event.type);
+            console.log("event target:",event.target);
+            console.log("event target tag name :",event.target.tagName);
+        });
+    </script>
+</body>
+</html>
