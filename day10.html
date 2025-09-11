@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10</title>
+</head>
+<body>
+    <!--Adding para using js-->
+    <div>
+    <p id="one"></p>
+    <button onclick="hello()">click me</button>
+    </div>
+
+    <!--dynamic list-->
+    <div>
+        <input type="text" placeholder="Enter some thing" id="listinput">
+        <button onclick="addtolist()">add</button>
+        <ul id="mylist">
+        </ul>
+    </div>
+
+    <!--multiple element-->
+    <div>
+        <button onclick="paragraph()">click me also</button>
+        <p id="pa"></p>
+        <p id="pi"></p>
+        <p id="po"></p>
+    </div>
+
+    <!--counter app-->
+    <div>
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <h1 id="st">0</h1>
+    </div>
+    <script>
+        //program 1
+        let one = document.getElementById("one");
+        function hello(){
+        one.textContent="Hello this is a new paragraph";
+        }
+
+        //program 2
+        function addtolist(){
+            let input = document.getElementById("listinput").value;
+            if(input.trim() !== ""){
+                let li = document.createElement("li");
+                li.textContent = input;
+                document.getElementById("li").appendChild(li);
+                document.getElementById("listinput").value = "";
+            }
+        }
+
+        //program 3
+        let pa = document.getElementById("pa");
+        let pi = document.getElementById("pi");
+        let po = document.getElementById("po");
+        function paragraph(){
+            pa.textContent="New paragraph";
+            pi.textContent="New paragraph";
+            po.textContent="New paragraph";
+        }
+
+        //program 4
+        let num = document.getElementById("st");
+        let count = 0;
+        function add(){
+            count++;
+            document.getElementById("st").textContent = count;
+        }
+        function sub(){
+            count--;
+            document.getElementById("st").textContent = count;
+        }
+    </script>
+</body>
+</html>
