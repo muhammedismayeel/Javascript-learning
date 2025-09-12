@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12</title>
+</head>
+<body>
+    <script>
+        //creating personal class
+        class student {
+            constructor(name,age,coures){
+            this.name = name;
+            this.age = age ;
+            this.coures = coures ;
+            };
+        }
+        let student1= new student("ismayeel",19,"bca");
+        console.log("hi,my name is "+student1.name +"and i am "+student1.age +" year old");
+
+        //creating Rectangle class
+        class Rectangle{
+            constructor(width,heigth){
+                this.width = width;
+                this.heigth= heigth;
+            }
+        
+        area(){
+            return this.width * this.heigth;
+        }
+    }
+    let r1 = new Rectangle(10*5);
+        console.log(r1.area());
+
+        //new class
+        class vehicle{
+            move(){
+                return "moving";
+            }
+        }
+        class bike extends vehicle{
+            move(){
+                return "bike is moving";
+            }
+        }
+        let v1 = new vehicle();
+        let b1 = new bike();
+        console.log(b1.move());
+
+        //getter and setter
+        class employee{
+            constructor(name,salary){
+                this.name = name;
+                this.salary = salary;
+            }
+            get salary(){
+                return this._salary;
+            }
+            set salary(newsalary){
+                if (newsalary>=0){
+                    this._salary = newsalary;
+                }
+                else{
+                    console.log("salary connot be -n");
+                }
+            }
+        }
+        let e1 = new employee("ismayeel",200000);
+        console.log(e1.salary);
+        let e2 = new employee("jhon",-56);
+        console.log(e2.salary)
+
+        //bank Account class
+        class bankacc{
+            constructor(owner,balance=0){
+            this.owner = owner    
+            this.balance = balance;
+            }
+            deposite(amount){
+                this.balance +=amount;
+                console.log("new balance is"+bankacc.balance);
+            }
+            withdraw(amount){
+                if(amount<=this.balance){
+                    this.balance -= amount;
+                    console.log("withdraw.new balance is"+bankacc.balance);
+                }
+                else{
+                    console.log("insufficit funds");
+                }
+            }
+            checkbalance(){
+                return " current balance is"+bankacc.balance;
+            }
+        }
+        let acc1 = new bankacc("ismayeel",89000);
+        acc1.deposite(1000);
+        acc1.withdraw(10000);
+        console.log(acc1.checkbalance());
+    </script>
+</body>
+</html>
