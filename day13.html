@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 13</title>
+</head>
+<body>
+    <script>
+        //template literals
+        function language(name,love){
+            this.name = name;
+            this.love = love;
+        }
+        language("ismayeel","love")
+        console.log(`my name is${name} and i love ${love}`);
+
+        //arrow function
+        let square = x => x*x;
+        console.log(square(5));
+
+        let a =30;
+        let b = 40;
+        let sum = (a,b)=> a+b;
+        console.log(sum(20,60));
+
+        let iseven = num => num%2===0;
+        console.log(iseven(3));
+        console.log(iseven(4));
+    </script>
+</body>
+</html>
