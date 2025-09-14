@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15</title>
+</head>
+<body>
+    <script>
+        //advanced array method
+        //map()
+        let a = [4,5,6,7];
+        let squares = a.map(a=>a*a);
+        console.log(squares);
+
+        //filter()
+        let b = [1,2,3,4,5,6,7,8,9];
+        let even = b.filter(num => num%2===0);
+        console.log(even)
+
+        //reduce()
+        let d = [2,3,4];
+        let product = d.reduce((acc,num)=>acc*num);
+        console.log(product);
+
+        //map()+filter()
+        let c = [10,15,20];
+        let double = c.map(c=>c+c);
+        let greaterthan20 = double.filter(double => double > 20);
+        console.log(greaterthan20);
+    </script>
+</body>
+</html>
