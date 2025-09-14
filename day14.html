@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14</title>
+</head>
+<body>
+    <script>
+        //spread operator for array and object
+        let arr1 = [1,2,3,4,5];
+        let arr2 = [6,7,8,9,0];
+        let com ={...arr1,...arr2};
+        console.log(com);
+
+        let obj1 = {
+            name : "ismayeel"
+        }
+        let obj2 = {
+            age : 19
+        }
+        let student = {...obj1,...obj2};
+        console.log(student);
+
+        //rest parameters
+        function multi(...num){
+            return num.reduce((a,b)=>a*b);
+        }
+        console.log(multi(7,7,1));
+
+        //Distucturing
+        let book = {
+            title : "js basic",
+            author : "ISMAYEEL",
+            year : 2025
+        }
+        let {title,author,year}=book;
+        console.log(title);
+
+        //for...of loop
+        let int = [5,10,15];
+        for(let ints of int){
+            console.log(ints);
+        }
+    </script>
+</body>
+</html>
