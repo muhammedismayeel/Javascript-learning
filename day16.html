@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16</title>
+</head>
+<body>
+    <script>
+        // Day 16
+        //using foreach()
+        const name = ["ali","sara","jhon"];
+        name.foreach(name=> console.log(name));
+
+        //using find()
+        let a = [10,40,55,66];
+        let result = a.find(a => a>50);
+        console.log(result);
+
+        //using some()
+        let b = [3,7,9,10];
+        let find = b.some(b =>b%2===0);
+        console.log(find);
+
+        //using every()
+        let c = [2,4,6,8];
+        let even = c.every(c => c%2 ===0);
+        console.log(even);
+    </script> 
+</body>
+</html>
