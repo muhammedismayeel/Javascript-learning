@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17</title>
+</head>
+<body>
+    <script>
+        //day 17 for set() and get()
+        let num = new Set([5,10,20,15,5]);
+        num.add(25);
+        console.log(num);
+        console.log(num.has(10));
+        num.delete(15);
+        console.log(num.size);
+
+        let person = new Map();
+        person.set("name","ali");
+        person.set("age",34);
+        person.set("city","mumbai");
+        console.log(person.get("name"));
+        console.log(person.get("age"));
+        person.set("city","delhi");
+        console.log(person.get("city"));
+    </script>
+</body>
+</html>
