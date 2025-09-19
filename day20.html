@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 20</title>
+</head>
+<body>
+    <script>
+        //Error handling
+        //Divide two numbers with error handling
+        function div(a,b){
+            if(b === 0){
+                throw new Error("you must enter a new value");
+            }
+            return a/b;
+        }
+        try{
+            console.log(div(5,0));
+        }
+        catch(error){
+            console.log("Catched new error "+error.message);
+        }
+
+        //Handling undefined variable
+        try{
+            console.log(myvar);
+        }
+        catch(error){
+            console.log("caught " + error.message);
+        }
+
+        //login funtion with Custom Error
+        function login(user){
+            if(!user){
+                throw new Error("Username needed");
+            }
+            return "hello "+user;
+        }
+        try{
+            console.log(login("Ismayeel"));
+            console.log(login(""));
+        }
+        catch(error){
+            console.log("Error "+error.message);
+        }
+    </script>
+</body>
+</html>
