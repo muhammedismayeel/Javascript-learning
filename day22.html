@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 22</title>
+</head>
+<body>
+    <script>
+        //Day 22 for JSON Practice Exercises
+        //Convert JS Object → JSON
+        let user = { title: "Book", price: 500, available: true };
+        let json = JSON.stringify(user);
+        console.log(json);
+
+        //Convert JSON → JS Object
+        let st = '{"brand":"Samsung","model":"S24","price":80000}';
+        let obj = JSON.parse(st);
+        console.log(obj.model);
+
+        //Save in LocalStorage
+        let a = { name: "Ismayeel", course: "JavaScript", score: 95 };
+        localStorage.setItem("user",JSON.stringify(a));
+        let b = JSON.parse(localStorage.getItem("user"));
+        console.log(b.score);
+
+        //Nested JSON
+        let c = { student: { name: "Ali", age: 21 }, subjects: ["Math", "CS"] };
+        let json1 = JSON.stringify(c);
+        console.log(json1);
+        let obj1 = JSON.parse(json1);
+        console.log(obj1.subjects[1]);
+
+        //Update Value in Stored JSON
+        let city = { city: "Chennai", country: "India" };
+        localStorage.setItem("place",JSON.stringify(city));
+        let get = JSON.parse(localStorage.getItem("place"));
+        console.log(get);
+        get.city = "delhi";
+        console.log(get);
+        localStorage.setItem("place", JSON.stringify(get));
+    </script>
+</body>
+</html>
