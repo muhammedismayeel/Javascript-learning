@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 21</title>
+</head>
+<body>
+    <script>
+        //day 21 for LocalStorage & SessionStorage
+        //Save a user’s name "Ali" in LocalStorage and retrieve it.
+        localStorage.setItem("username","ali");
+        let name = localStorage.getItem("username");
+        console.log(name);
+
+        //Save a value "LoggedIn" in SessionStorage and then delete it.
+        sessionStorage.setItem( "set","Login");
+        let log = sessionStorage.removeItem("set");
+        console.log(log);
+
+        //Create a script that counts how many times a page was visited (using LocalStorage).
+        if (localStorage.getItem("visits")) {
+       let count = parseInt(localStorage.getItem("visits"));
+       count++;
+       localStorage.setItem("visits", count);
+       console.log("You visited this page " + count + " times.");
+       } else {
+       localStorage.setItem("visits", 1);
+       console.log("Welcome! This is your first visit.");
+       }
+    </script> 
+</body>
+</html>
